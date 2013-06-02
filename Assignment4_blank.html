@@ -106,6 +106,7 @@
 				//Try to use the api to retrieve our friend lists and display them in the website
 				FB.api('/me/friendlists', function(res){
 					getFr(res);
+					console.log(res);
 				});
 					
 			}
@@ -122,8 +123,7 @@
 					
 					$("<div><h1>" + temp["data"][i]["name"] + "</h1><ul class='sortFB connectSort' id='"+ GroupID[i] +"'></ul></div>").appendTo("#GroupList");
 
-					console.log("check");
-				
+			
 					i++;
 				}
 					
